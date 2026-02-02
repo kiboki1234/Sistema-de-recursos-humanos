@@ -12,6 +12,57 @@ El sistema sigue una arquitectura Cliente-Servidor separada:
 *   **Seguridad**: Autenticación mediante **JWT (JSON Web Tokens)** y hashing de contraseñas con **bcrypt**.
 *   **Control de Versiones**: Git.
 
+## 📐 Diagramas de Arquitectura
+
+### Arquitectura General
+```mermaid
+graph TD
+    User((Usuario)) -->|Navegador| Frontend[Frontend React]
+    Frontend <-->|HTTP Requests (Axios)| Backend[Backend Node/Express]
+    Backend <-->|Mongoose Queries| DB[(MongoDB Database)]
+```
+
+### Arquitectura Backend
+El backend sigue el patrón MVC (Model-View-Controller) modificado para API REST.
+
+```mermaid
+graph LR
+    Request[HTTP Request] --> Authenticator{Auth Middleware}
+    Authenticator -- Valid Token --> RoleCheck{Role Middleware}
+    RoleCheck -- Authorized --> Router[Express Router]
+    Router --> Controller[Controller Logic]
+    Controller --> Model[Mongoose Model]
+    Model <--> DB[(MongoDB)]
+    Controller -- JSON Response --> Response[HTTP Response]
+    Authenticator -- Invalid --> Error[401 Unauthorized]
+```
+
+### Arquitectura Frontend
+Organización de componentes y vistas protegidas por rol.
+
+```mermaid
+graph TD
+    App[App.js / Router] --> AuthProvider[AuthContext]
+    AuthProvider -->|Provee Estado de Usuario| ProtectedRoutes{Rutas Protegidas}
+    
+    ProtectedRoutes -->|Role: Coordinator| CoordView[Coordinator Dashboard]
+    ProtectedRoutes -->|Role: President| PresView[President Dashboard]
+    ProtectedRoutes -->|Role: VP| VPView[VP Dashboard]
+    ProtectedRoutes -->|Role: Leader| LeaderView[Leader Dashboard]
+    ProtectedRoutes -->|Role: Member| MemberView[Member View]
+
+    subgraph Módulos Compartidos
+        CoordView --> UserMgmt[UserManagement]
+        PresView --> UserMgmt
+        VPView --> UserMgmt
+        LeaderView --> TeamMgmt[TeamManagement]
+    end
+
+    UserMgmt -.-> API[Axios Interceptor]
+    TeamMgmt -.-> API
+    API <--> Backend
+```
+
 ## 👥 Roles y Permisos
 
 El sistema implementa una jerarquía estricta de roles para mantener la integridad de la organización:
