@@ -1,0 +1,25 @@
+.message{
+    position: fixed;
+    bottom: 20px; /* Ajusta la distancia desde la parte inferior */
+    right: 30px; /* Ajusta la distancia desde la derecha */
+    z-index: 1000;
+}
+.message__button img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;   /* Ocupa todo el ancho del contenedor */
+    height: 100%; /* Ocupa todo el alto del contenedor */
+    object-fit: cover; /* Cubre todo el contenedor, recortando si es necesario */
+    object-position: center; /* Centra la imagen */
+    
+}
+
+.message__button{
+    position: relative;
+    border: none;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 20px #25d366;
+}

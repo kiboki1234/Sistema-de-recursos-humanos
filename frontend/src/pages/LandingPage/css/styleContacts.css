@@ -1,0 +1,52 @@
+.navbar {
+    background-color: #ee3a43;
+}
+.logo-navbar{
+    height: 40px;
+    width: 40px;
+}
+.navbar-brand, .nav-link {
+    color: #fefefe !important;
+}
+.navbar-nav .nav-item:hover {
+    background-color: #c32d37;
+    border-color: #c32d37;
+    border-radius: 5px;
+}
+body {
+    background-color: #fefefe;
+    color: #333;
+}
+.contact-container {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.btn-primary {
+    background-color: #ee3a43;
+    border-color: #ee3a43;
+}
+.btn-primary:hover {
+    background-color: #cc323b;
+    border-color: #cc323b;
+}
+.form-control:focus {
+    border-color: #ee3a43;
+    box-shadow: 0 0 0 0.25rem rgba(238, 58, 67, 0.25);
+}
+.header-title {
+    font-size: 1.8rem;
+    color: #ee3a43;
+}
+.contact-info {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+}
+.contact-info h5 {
+    color: #ee3a43;
+}

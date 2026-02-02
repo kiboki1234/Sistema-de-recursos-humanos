@@ -1,0 +1,28 @@
+{
+  "background_color": "#ffffff",
+  "categories": ["lifestyle", "music"],
+  "description": "Aplicacion del club CPED @Andres Espin, @Josue Gualichico, @Carlos Jaya",
+  "dir": "ltr",
+  "display_override": ["standalone", "fullscreen"],
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "lang": "es-EC",
+  "name": "Club de Política Exterior y Diplomación",
+  "orientation": "portrait",
+  "prefer_related_application": false,
+  "scope": "/",
+  "short_name": "CPED",
+  "start_url": "/aboutus",
+  "theme_color": "#ee3a43"
+}
