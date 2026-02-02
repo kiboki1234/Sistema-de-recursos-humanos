@@ -10,6 +10,7 @@ import { FaUsers, FaTasks, FaCalendarCheck } from "react-icons/fa";
 import "../css/style.css";
 import Footer from "../common/Footer";
 import CurrentDirective from "../common/CurrentDirective";
+import MandateHistory from '../common/MandateHistory';
 
 const PresidentView = () => {
     const [statistics, setStatistics] = useState({
@@ -132,6 +133,9 @@ const PresidentView = () => {
 
                 {/* Current Directive */}
                 <CurrentDirective />
+
+                {/* Mandate History */}
+                <MandateHistory />
 
                 {/* Team Members */}
                 <Row className="mb-4">

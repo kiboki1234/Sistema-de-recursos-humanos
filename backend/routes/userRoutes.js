@@ -1,5 +1,7 @@
 const express = require('express');
-const { createUser, getAllUsers, getUserById, updateUser, deleteUser, getAllLeaders, assignMemberToLeader, getDirective } = require('../controllers/userController');
+const multer = require('multer');
+const { storage } = require('../config/cloudinary');
+const { createUser, getAllUsers, getUserById, updateUser, deleteUser, getAllLeaders, assignMemberToLeader, getDirective, uploadProfilePicture, getMandateHistory } = require('../controllers/userController');
 const protect = require('../middlewares/authMiddleware');
 const authorize = require('../middlewares/roleMiddleware');
 
@@ -15,6 +17,12 @@ router.get('/leaders', protect, authorize('strategic_coordinator', 'president', 
 
 // Obtener directiva actual
 router.get('/directive', protect, authorize('strategic_coordinator', 'president', 'vice_president'), getDirective);
+router.get('/mandates-history', protect, authorize('strategic_coordinator', 'president', 'vice_president'), getMandateHistory);
+
+
+// Subir foto de perfil (Accesible para todos los usuarios autenticados)
+const upload = multer({ storage });
+router.post('/upload-photo', protect, upload.single('image'), uploadProfilePicture);
 
 // Gestión de equipos por líderes
 router.put('/assign-team', protect, authorize('leader'), assignMemberToLeader);

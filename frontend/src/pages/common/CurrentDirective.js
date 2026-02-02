@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Card, Row, Col, Badge, Spinner } from 'react-bootstrap';
+import { Card, Row, Col, Badge, Spinner, Image } from 'react-bootstrap';
+import { FaUserCircle } from "react-icons/fa";
 import API_BASE_URL from '../../api';
 
 const CurrentDirective = () => {
@@ -40,10 +41,21 @@ const CurrentDirective = () => {
                 <h6 className="text-uppercase mb-2 opacity-75" style={{ fontSize: '0.85rem', letterSpacing: '1px' }}>{title}</h6>
                 {user ? (
                     <>
+                        <div className="mb-3 d-flex justify-content-center">
+                            {user.profilePicture ? (
+                                <Image
+                                    src={user.profilePicture}
+                                    roundedCircle
+                                    style={{ width: '80px', height: '80px', objectFit: 'cover', border: '3px solid rgba(255,255,255,0.5)' }}
+                                />
+                            ) : (
+                                <FaUserCircle size={80} className={`text-${bg === 'light' ? 'secondary' : 'white'} opacity-50`} />
+                            )}
+                        </div>
                         <h4 className="fw-bold mb-1">{user.name}</h4>
-                        <div className="small mb-1">{user.email}</div>
+                        <div className="small mb-1 opacity-75">{user.email}</div>
                         <div className="small opacity-75">{user.phone}</div>
-                        <Badge bg="success" className="mt-2">Activo</Badge>
+                        <Badge bg={bg === 'light' ? 'success' : 'light'} text={bg === 'light' ? 'light' : 'dark'} className="mt-2">Activo</Badge>
                     </>
                 ) : (
                     <div className="text-muted fst-italic py-3">Vacante</div>
@@ -76,9 +88,20 @@ const CurrentDirective = () => {
                     {leaders.map(leader => (
                         <Col key={leader._id} sm={6} md={4} lg={3}>
                             <Card className="h-100 border-start border-4 border-success shadow-sm">
-                                <Card.Body className="py-2">
-                                    <div className="fw-bold">{leader.name}</div>
-                                    <div className="text-muted small" style={{ fontSize: '0.85rem' }}>{leader.email}</div>
+                                <Card.Body className="py-2 d-flex align-items-center gap-3">
+                                    {leader.profilePicture ? (
+                                        <Image
+                                            src={leader.profilePicture}
+                                            roundedCircle
+                                            style={{ width: '40px', height: '40px', objectFit: 'cover' }}
+                                        />
+                                    ) : (
+                                        <FaUserCircle size={40} className="text-secondary" />
+                                    )}
+                                    <div>
+                                        <div className="fw-bold">{leader.name}</div>
+                                        <div className="text-muted small" style={{ fontSize: '0.85rem' }}>{leader.email}</div>
+                                    </div>
                                 </Card.Body>
                             </Card>
                         </Col>

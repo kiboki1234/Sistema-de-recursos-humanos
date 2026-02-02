@@ -18,6 +18,7 @@ const contactRoutes = require('./routes/contactRoutes');
 const { protect } = require('./middlewares/authMiddleware');
 const attendanceRoutes = require('./routes/attendanceRoutes');
 const documentsRoutes = require('./routes/attendanceDocumentRoutes');
+const teamRoutes = require('./routes/teamRoutes');
 dotenv.config();
 connectDB();
 
@@ -41,7 +42,7 @@ app.use('/api/news', news);
 app.use('/api/contact', contactRoutes);
 app.use('/api/attendances', attendanceRoutes);
 app.use('/api/documents', documentsRoutes);
-const teamRoutes = require('./routes/teamRoutes');
+//Rutas de equipos
 app.use('/api/teams', teamRoutes);
 
 // Manejo de errores

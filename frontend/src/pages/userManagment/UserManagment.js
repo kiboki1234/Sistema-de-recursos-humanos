@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Button, Modal, Form, Pagination } from "react-bootstrap";
+import { Container, Table, Button, Form, Modal, Pagination, Alert, InputGroup, Row, Col } from "react-bootstrap";
+import * as XLSX from "xlsx";
+import { saveAs } from "file-saver";
 import Footer from "../common/Footer";
 import API_BASE_URL from "../../api";
 
@@ -15,7 +17,6 @@ const UserManagement = ({ includeFooter = true }) => {
         email: "",
         password: "",
         role: "",
-        student_id: "",
         student_id: "",
         phone: "",
         assignedLeader: "",
@@ -256,10 +257,42 @@ const UserManagement = ({ includeFooter = true }) => {
 
     const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
+    // --- EXPORT FUNCTION ---
+    const exportToExcel = () => {
+        const fileType = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=UTF-8';
+        const fileExtension = '.xlsx';
+
+        // Prepare data for export (flatten structure if needed)
+        const exportData = users.map(user => ({
+            Nombre: user.name,
+            Email: user.email,
+            Rol: getRoleDisplayName(user.role),
+            Teléfono: user.phone,
+            "ID Estudiante": user.student_id,
+            Estado: user.isActive !== false ? "Activo" : "Inactivo",
+            "Líder Asignado": user.assignedLeader ? user.assignedLeader.name : "N/A"
+        }));
+
+        const ws = XLSX.utils.json_to_sheet(exportData);
+        const wb = { Sheets: { 'Usuarios': ws }, SheetNames: ['Usuarios'] };
+        const excelBuffer = XLSX.write(wb, { bookType: 'xlsx', type: 'array' });
+        const data = new Blob([excelBuffer], { type: fileType });
+
+        const fileName = `Reporte_Usuarios_${new Date().toISOString().slice(0, 10)} `;
+        saveAs(data, fileName + fileExtension);
+    };
+
     return (
         <>
-            <div className="container mt-5 pt-4">
-                <h1 className="mb-4">{isLeader ? "Gestión de Mi Equipo" : "Gestión de Usuarios"}</h1>
+            <Container className={includeFooter ? "mt-5 pt-5 flex-grow-1" : ""}>
+                <div className="d-flex justify-content-between align-items-center mb-4">
+                    <h1 className="mb-0">{isLeader ? "Gestión de Mi Equipo" : "Gestión de Usuarios"}</h1>
+                    {!isLeader && (
+                        <Button variant="success" onClick={exportToExcel}>
+                            <i className="bi bi-file-earmark-excel me-2"></i>Exportar Excel
+                        </Button>
+                    )}
+                </div>
                 <div className="row">
                     {/* Panel de Creación - Oculto para Líderes */}
                     {!isLeader && (
@@ -350,8 +383,8 @@ const UserManagement = ({ includeFooter = true }) => {
                                                                         {getRoleDisplayName(user.role)}
                                                                     </span>
                                                                     {user.assignedLeader && (
-                                                                        <span className={`badge ${user.assignedLeader._id === currentUser?._id ? 'bg-success' : 'bg-light text-dark border'}`}>
-                                                                            {user.assignedLeader._id === currentUser?._id ? "En mi equipo" : `Líder: ${user.assignedLeader.name}`}
+                                                                        <span className={`badge ${user.assignedLeader._id === currentUser?._id ? 'bg-success' : 'bg-light text-dark border'} `}>
+                                                                            {user.assignedLeader._id === currentUser?._id ? "En mi equipo" : `Líder: ${user.assignedLeader.name} `}
                                                                         </span>
                                                                     )}
                                                                     {!user.assignedLeader && user.role === 'member' && (
@@ -427,7 +460,7 @@ const UserManagement = ({ includeFooter = true }) => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </Container>
 
             {/* Modal de Edición */}
             <Modal show={showEditModal} onHide={() => setShowEditModal(false)}>

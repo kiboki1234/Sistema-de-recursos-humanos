@@ -280,10 +280,10 @@ exports.getAllLeaders = async (req, res) => {
 // Obtener la directiva actual (Usuarios activos de alto rango)
 exports.getDirective = async (req, res) => {
   try {
-    const coordinator = await User.findOne({ role: 'strategic_coordinator', isActive: true }).select('name email phone role student_id');
-    const president = await User.findOne({ role: 'president', isActive: true }).select('name email phone role student_id');
-    const vicePresident = await User.findOne({ role: 'vice_president', isActive: true }).select('name email phone role student_id');
-    const leaders = await User.find({ role: 'leader', isActive: true }).select('name email phone role student_id');
+    const coordinator = await User.findOne({ role: 'strategic_coordinator', isActive: true }).select('name email phone role student_id profilePicture');
+    const president = await User.findOne({ role: 'president', isActive: true }).select('name email phone role student_id profilePicture');
+    const vicePresident = await User.findOne({ role: 'vice_president', isActive: true }).select('name email phone role student_id profilePicture');
+    const leaders = await User.find({ role: 'leader', isActive: true }).select('name email phone role student_id profilePicture');
 
     res.status(200).json({
       strategic_coordinator: coordinator,
@@ -293,6 +293,44 @@ exports.getDirective = async (req, res) => {
     });
   } catch (error) {
     res.status(500).json({ message: "Error al obtener la directiva actual", error: error.message });
+  }
+};
+
+// Obtener historial de mandatos (Usuarios inactivos de roles directivos)
+exports.getMandateHistory = async (req, res) => {
+  try {
+    const history = await User.find({
+      role: { $in: ['strategic_coordinator', 'president', 'vice_president'] },
+      isActive: false // Solo usuarios inactivos (pasados)
+    })
+      .sort({ createdAt: -1 }) // Ordenados por fecha de creación (aproximación a periodo)
+      .select('name role period createdAt email');
+
+    res.status(200).json(history);
+  } catch (error) {
+    res.status(500).json({ message: "Error al obtener el historial", error: error.message });
+  }
+};
+
+// Subir Foto de Perfil
+exports.uploadProfilePicture = async (req, res) => {
+  try {
+    if (!req.file) {
+      return res.status(400).json({ message: "No se proporcionó ninguna imagen" });
+    }
+
+    const userId = req.user.id;
+    const imageUrl = req.file.path; // Cloudinary devuelve la URL en path
+
+    const updatedUser = await User.findByIdAndUpdate(
+      userId,
+      { profilePicture: imageUrl },
+      { new: true }
+    ).select('-password');
+
+    res.status(200).json(updatedUser);
+  } catch (error) {
+    res.status(500).json({ message: "Error al subir la imagen", error: error.message });
   }
 };
 

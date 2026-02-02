@@ -14,7 +14,8 @@ const UserSchema = new mongoose.Schema({
   phone: { type: String, required: true, unique: true },
   assignedLeader: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: false }, // Referencia al líder asignado
   isActive: { type: Boolean, default: true },
-  period: { type: String, required: false } // E.g., "2025-2026"
+  period: { type: String, required: false }, // E.g., "2025-2026"
+  profilePicture: { type: String, default: "" } // URL de Cloudinary
 }, { timestamps: true });
 
 // Encriptar contraseña antes de guardar

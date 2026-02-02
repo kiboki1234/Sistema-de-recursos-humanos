@@ -24,7 +24,13 @@ exports.register = async (req, res) => {
 
     res.status(201).json({
       token,
-      user: { id: newUser._id, name: newUser.name, role: newUser.role, isActive: newUser.isActive }
+      user: {
+        id: newUser._id,
+        name: newUser.name,
+        role: newUser.role,
+        isActive: newUser.isActive,
+        profilePicture: newUser.profilePicture
+      }
     });
   } catch (error) {
     res.status(500).json({ message: 'Error al registrar usuario', error: error.message });
@@ -51,7 +57,13 @@ exports.login = async (req, res) => {
 
     res.json({
       token,
-      user: { id: user._id, name: user.name, role: user.role, isActive: user.isActive }
+      user: {
+        id: user._id,
+        name: user.name,
+        role: user.role,
+        isActive: user.isActive,
+        profilePicture: user.profilePicture
+      }
     });
   } catch (error) {
     res.status(500).json({ message: 'Error en el servidor', error: error.message });

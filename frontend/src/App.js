@@ -88,6 +88,7 @@ function App() {
             <Route path="/debateModels" element={<DebateModels />} />
             <Route path="/events" element={<Events />} />
             <Route path="/NewsList" element={<NewsList />} />
+            <Route path="*" element={<Navigate to="/" replace />} />
           </>
         )}
       </Routes>

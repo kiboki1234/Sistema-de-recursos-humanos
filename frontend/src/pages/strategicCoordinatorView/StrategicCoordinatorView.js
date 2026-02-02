@@ -9,6 +9,7 @@ import { FaUsers, FaTasks, FaCalendarAlt, FaChartLine } from "react-icons/fa";
 import "../css/style.css";
 import Footer from "../common/Footer";
 import CurrentDirective from "../common/CurrentDirective";
+import MandateHistory from '../common/MandateHistory';
 
 const StrategicCoordinatorView = () => {
     const [statistics, setStatistics] = useState({
@@ -106,6 +107,9 @@ const StrategicCoordinatorView = () => {
 
                 {/* Current Directive */}
                 <CurrentDirective />
+
+                {/* Historial de Mandatos */}
+                <MandateHistory />
 
                 {/* Users by Role */}
                 <Row className="mb-4">
