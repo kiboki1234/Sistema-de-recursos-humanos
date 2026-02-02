@@ -18,7 +18,7 @@ El sistema sigue una arquitectura Cliente-Servidor separada:
 ```mermaid
 graph TD
     User((Usuario)) -->|Navegador| Frontend[Frontend React]
-    Frontend <-->|HTTP Requests (Axios)| Backend[Backend Node/Express]
+    Frontend <-->|HTTP Requests Axios| Backend[Backend Node Express]
     Backend <-->|Mongoose Queries| DB[(MongoDB Database)]
 ```
 
