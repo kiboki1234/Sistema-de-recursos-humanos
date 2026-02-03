@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Club Manager - La Solución Integral</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">HR Manager <span class="dot">.</span></div>
+        <ul class="nav-links">
+            <li><a href="#features">Características</a></li>
+            <li><a href="#benefits">Beneficios</a></li>
+            <li><a href="#testimonials">Testimonios</a></li>
+            <li><a href="#contact" class="btn-primary">Contáctanos</a></li>
+        </ul>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div id="canvas-container"></div>
+        <div class="hero-content">
+            <h1>Gestión de Clubes <br> <span class="highlight">Reinventada</span></h1>
+            <p>La plataforma definitiva para gestionar recursos humanos, asistencias y roles en tu organización
+                estudiantil. Adaptable a cualquier club, escalable y eficiente.</p>
+            <div class="hero-buttons">
+                <a href="https://sistema-de-recursos-humanos.onrender.com" class="btn-primary" target="_blank">Solicitar
+                    Demo</a>
+                <a href="#features" class="btn-secondary">Ver Más</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="glass-mockup-container">
+                <!-- Floating Badge 1: Stats -->
+                <div class="floating-widget stats-widget">
+                    <div class="widget-icon"><i class="fas fa-chart-pie"></i></div>
+                    <div class="widget-info">
+                        <span>Eficiencia</span>
+                        <strong>+127%</strong>
+                    </div>
+                </div>
+
+                <!-- Main Glass Panel -->
+                <div class="glass-panel">
+                    <div class="glass-header">
+                        <div class="window-controls">
+                            <span class="control red"></span>
+                            <span class="control yellow"></span>
+                            <span class="control green"></span>
+                        </div>
+                        <div class="search-bar"></div>
+                        <div class="user-profile-sm"></div>
+                    </div>
+                    <div class="glass-body">
+                        <div class="sidebar-col">
+                            <div class="menu-item active"></div>
+                            <div class="menu-item"></div>
+                            <div class="menu-item"></div>
+                        </div>
+                        <div class="content-col">
+                            <div class="glass-card header-card">
+                                <h3>Resumen Semanal</h3>
+                                <div class="progress-bar">
+                                    <div class="fill"></div>
+                                </div>
+                            </div>
+                            <div class="grid-row">
+                                <div class="glass-card sm-card"></div>
+                                <div class="glass-card sm-card"></div>
+                            </div>
+                            <div class="glass-card graph-card">
+                                <div class="graph-bars">
+                                    <div class="bar" style="height: 40%"></div>
+                                    <div class="bar" style="height: 70%"></div>
+                                    <div class="bar" style="height: 50%"></div>
+                                    <div class="bar" style="height: 85%"></div>
+                                    <div class="bar" style="height: 60%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Floating Badge 2: User -->
+                <div class="floating-widget user-widget">
+                    <div class="user-avatar-lg"><i class="fas fa-check"></i></div>
+                    <div class="widget-info">
+                        <strong>Carlos T.</strong>
+                        <span>Presidente</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="features" class="features">
+        <div class="section-title">
+            <h2>Todo lo que necesitas</h2>
+            <p>Diseñado para potenciar el liderazgo y la organización.</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="icon-box"><i class="fas fa-users-cog"></i></div>
+                <h3>Roles y Permisos</h3>
+                <p>Jerarquía estricta y segura. Desde Presidentes hasta Miembros, cada uno con su panel personalizado.
+                </p>
+            </div>
+            <div class="feature-card">
+                <div class="icon-box"><i class="fas fa-chart-line"></i></div>
+                <h3>Estadísticas en Tiempo Real</h3>
+                <p>Monitorea asistencias, rendimiento de equipos y cumplimiento de tareas con gráficos interactivos.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon-box"><i class="fas fa-calendar-check"></i></div>
+                <h3>Gestión de Asistencias</h3>
+                <p>Control total sobre las prácticas y eventos. Historial detallado por miembro y equipo.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon-box"><i class="fas fa-tasks"></i></div>
+                <h3>Seguimiento de Tareas</h3>
+                <p>Asigna y supervisa tareas. Asegura que ningún proyecto se quede sin completar.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="analytics-hero" class="hero hero-variant hero-analytics">
+        <div id="canvas-container-analytics"></div>
+        <div class="hero-content">
+            <h1>Analytics <br> <span class="highlight-purple">Deep Vision</span></h1>
+            <p>Toma decisiones basadas en datos reales. Nuestra IA analiza patrones de asistencia y rendimiento para
+                sugerir mejoras estratégicas.</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn-primary btn-purple">Ver Reportes</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <!-- Placeholder for visual balance -->
+        </div>
+    </section>
+
+    <section id="benefits" class="benefits">
+        <div class="benefits-container">
+            <div class="benefit-content">
+                <h2>Adaptable a cualquier organización</h2>
+                <p>Ya sea un club de debate, un equipo deportivo o una asociación cultural, nuestro sistema se moldea a
+                    tus necesidades.</p>
+                <ul class="benefit-list">
+                    <li><i class="fas fa-check-circle"></i> Configuración rápida y sencilla</li>
+                    <li><i class="fas fa-check-circle"></i> Interfaz intuitiva y moderna</li>
+                    <li><i class="fas fa-check-circle"></i> Soporte para múltiples equipos y departamentos</li>
+                </ul>
+            </div>
+            <div class="benefit-image">
+                <div class="abstract-shape">
+                    <i class="fas fa-rocket rocket-icon"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="security-hero" class="hero hero-variant hero-security">
+        <div id="canvas-container-security"></div>
+        <div class="hero-content">
+            <h1>Seguridad <br> <span class="highlight-teal">Blindada</span></h1>
+            <p>Protección de grado militar para tus datos. Encriptación de extremo a extremo y gestión de roles
+                estricta.</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn-primary btn-teal">Conocer Más</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <!-- Placeholder -->
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <div class="section-title">
+            <h2>Lo que dicen nuestros usuarios</h2>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <p>"Desde que implementamos este sistema, la organización del Club de Debate ha mejorado un 200%.
+                    ¡Imprescindible!"</p>
+                <div class="author">
+                    <div class="avatar">CT</div>
+                    <div class="info">
+                        <strong>Carlos Torres</strong>
+                        <span>Coordinador General</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <p>"La gestión de asistencias solía ser un dolor de cabeza. Ahora es automático y transparente para
+                    todos."</p>
+                <div class="author">
+                    <div class="avatar">MP</div>
+                    <div class="info">
+                        <strong>Maria Perez</strong>
+                        <span>Líder de Equipo</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cta" class="cta">
+        <div class="cta-content">
+            <h2>¿Listo para transformar tu club?</h2>
+            <p>Lleva tu organización al siguiente nivel hoy mismo.</p>
+            <a href="https://sistema-de-recursos-humanos-b5oo.vercel.app/" class="btn-white" target="_blank">Empezar
+                Ahora</a>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>HR Manager</h3>
+                <p>La solución inteligente para clubes universitarios.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#">Privacidad</a>
+                <a href="#">Términos</a>
+                <a href="#">Soporte</a>
+            </div>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2026 HR Club Manager. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
