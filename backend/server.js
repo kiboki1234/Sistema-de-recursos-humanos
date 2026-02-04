@@ -45,6 +45,7 @@ app.use('/api/documents', documentsRoutes);
 //Rutas de equipos
 app.use('/api/teams', teamRoutes);
 
+
 // Manejo de errores
 app.use(errorHandler);
 

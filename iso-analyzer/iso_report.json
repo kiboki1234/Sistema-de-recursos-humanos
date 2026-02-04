@@ -1,0 +1,826 @@
+{
+  "metrics": {
+    "files": [
+      {
+        "path": "backend\\testRateLimit.js",
+        "loc": 56,
+        "comments": 8,
+        "mi": 87.71,
+        "complexity": 8
+      },
+      {
+        "path": "backend\\testLogin.js",
+        "loc": 32,
+        "comments": 1,
+        "mi": 90.539,
+        "complexity": 3
+      },
+      {
+        "path": "backend\\testDates2.js",
+        "loc": 14,
+        "comments": 2,
+        "mi": 106.816,
+        "complexity": 2
+      },
+      {
+        "path": "backend\\testDates.js",
+        "loc": 19,
+        "comments": 2,
+        "mi": 106.023,
+        "complexity": 3
+      },
+      {
+        "path": "backend\\server.js",
+        "loc": 46,
+        "comments": 4,
+        "mi": 79.618,
+        "complexity": 4
+      },
+      {
+        "path": "backend\\seedUsers.js",
+        "loc": 97,
+        "comments": 6,
+        "mi": 95.449,
+        "complexity": 6
+      },
+      {
+        "path": "backend\\seedDataComplete.js",
+        "loc": 251,
+        "comments": 27,
+        "mi": 65.354,
+        "complexity": 10
+      },
+      {
+        "path": "backend\\seedData.js",
+        "loc": 270,
+        "comments": 11,
+        "mi": 45.953,
+        "complexity": 2
+      },
+      {
+        "path": "backend\\fix_users_status.js",
+        "loc": 24,
+        "comments": 2,
+        "mi": 98.998,
+        "complexity": 2
+      },
+      {
+        "path": "backend\\api.js",
+        "loc": 2,
+        "comments": 2,
+        "mi": 146.576,
+        "complexity": 1
+      },
+      {
+        "path": "backend\\routes\\vicePresidentRoutes.js",
+        "loc": 15,
+        "comments": 1,
+        "mi": 99.907,
+        "complexity": 1
+      },
+      {
+        "path": "backend\\routes\\userRoutes.js",
+        "loc": 19,
+        "comments": 6,
+        "mi": 77.443,
+        "complexity": 1
+      },
+      {
+        "path": "backend\\routes\\teamRoutes.js",
+        "loc": 13,
+        "comments": 1,
+        "mi": 87.193,
+        "complexity": 1
+      },
+      {
+        "path": "backend\\routes\\taskRoutes.js",
+        "loc": 21,
+        "comments": 2,
+        "mi": 89.639,
+        "complexity": 1
+      },
+      {
+        "path": "backend\\routes\\strategicCoordinatorRoutes.js",
+        "loc": 15,
+        "comments": 1,
+        "mi": 99.907,
+        "complexity": 1
+      },
+      {
+        "path": "backend\\routes\\presidentRoutes.js",
+        "loc": 15,
+        "comments": 1,
+        "mi": 99.907,
+        "complexity": 1
+      },
+      {
+        "path": "backend\\routes\\practiceRoutes.js",
+        "loc": 11,
+        "comments": 2,
+        "mi": 92.5,
+        "complexity": 1
+      },
+      {
+        "path": "backend\\routes\\newsRoutes.js",
+        "loc": 5,
+        "comments": 1,
+        "mi": 114.189,
+        "complexity": 1
+      },
+      {
+        "path": "backend\\routes\\memberRoutes.js",
+        "loc": 15,
+        "comments": 1,
+        "mi": 99.907,
+        "complexity": 1
+      },
+      {
+        "path": "backend\\routes\\leaderRoutes.js",
+        "loc": 15,
+        "comments": 1,
+        "mi": 99.907,
+        "complexity": 1
+      },
+      {
+        "path": "backend\\routes\\contactRoutes.js",
+        "loc": 8,
+        "comments": 4,
+        "mi": 102.646,
+        "complexity": 1
+      },
+      {
+        "path": "backend\\routes\\authRoutes.js",
+        "loc": 6,
+        "comments": 0,
+        "mi": 109.57,
+        "complexity": 1
+      },
+      {
+        "path": "backend\\routes\\attendanceRoutes.js",
+        "loc": 16,
+        "comments": 5,
+        "mi": 97.444,
+        "complexity": 1
+      },
+      {
+        "path": "backend\\routes\\attendanceDocumentRoutes.js",
+        "loc": 10,
+        "comments": 0,
+        "mi": 105.934,
+        "complexity": 1
+      },
+      {
+        "path": "backend\\models\\VicePresident.js",
+        "loc": 6,
+        "comments": 0,
+        "mi": 111.425,
+        "complexity": 1
+      },
+      {
+        "path": "backend\\models\\User.js",
+        "loc": 28,
+        "comments": 4,
+        "mi": 84.301,
+        "complexity": 3
+      },
+      {
+        "path": "backend\\models\\Team.js",
+        "loc": 23,
+        "comments": 0,
+        "mi": 93.974,
+        "complexity": 1
+      },
+      {
+        "path": "backend\\models\\Task.js",
+        "loc": 14,
+        "comments": 0,
+        "mi": 90.001,
+        "complexity": 1
+      },
+      {
+        "path": "backend\\models\\StrategicCoordinator.js",
+        "loc": 7,
+        "comments": 0,
+        "mi": 106.029,
+        "complexity": 1
+      },
+      {
+        "path": "backend\\models\\President.js",
+        "loc": 7,
+        "comments": 0,
+        "mi": 104.961,
+        "complexity": 1
+      },
+      {
+        "path": "backend\\models\\Practice.js",
+        "loc": 11,
+        "comments": 3,
+        "mi": 90.565,
+        "complexity": 1
+      },
+      {
+        "path": "backend\\models\\Member.js",
+        "loc": 4,
+        "comments": 0,
+        "mi": 120.928,
+        "complexity": 1
+      },
+      {
+        "path": "backend\\models\\Leader.js",
+        "loc": 6,
+        "comments": 0,
+        "mi": 111.425,
+        "complexity": 1
+      },
+      {
+        "path": "backend\\models\\index.js",
+        "loc": 14,
+        "comments": 0,
+        "mi": 98.991,
+        "complexity": 1
+      },
+      {
+        "path": "backend\\models\\Contact.js",
+        "loc": 33,
+        "comments": 1,
+        "mi": 106.63,
+        "complexity": 3
+      },
+      {
+        "path": "backend\\models\\Attendance.js",
+        "loc": 9,
+        "comments": 0,
+        "mi": 92.74,
+        "complexity": 1
+      },
+      {
+        "path": "backend\\middlewares\\roleMiddleware.js",
+        "loc": 17,
+        "comments": 3,
+        "mi": 114.719,
+        "complexity": 6
+      },
+      {
+        "path": "backend\\middlewares\\errorHandler.js",
+        "loc": 9,
+        "comments": 0,
+        "mi": 124.326,
+        "complexity": 4
+      },
+      {
+        "path": "backend\\middlewares\\authMiddleware.js",
+        "loc": 20,
+        "comments": 1,
+        "mi": 96.581,
+        "complexity": 7
+      },
+      {
+        "path": "backend\\coverage\\lcov-report\\sorter.js",
+        "loc": 171,
+        "comments": 22,
+        "mi": 103.127,
+        "complexity": 40
+      },
+      {
+        "path": "backend\\coverage\\lcov-report\\prettify.js",
+        "loc": 1,
+        "comments": 2,
+        "mi": 75.612,
+        "complexity": 208
+      },
+      {
+        "path": "backend\\coverage\\lcov-report\\block-navigation.js",
+        "loc": 66,
+        "comments": 14,
+        "mi": 107.271,
+        "complexity": 19
+      },
+      {
+        "path": "backend\\controllers\\vicePresidentController.js",
+        "loc": 66,
+        "comments": 5,
+        "mi": 94.436,
+        "complexity": 9
+      },
+      {
+        "path": "backend\\controllers\\userController.js",
+        "loc": 301,
+        "comments": 43,
+        "mi": 76.794,
+        "complexity": 63
+      },
+      {
+        "path": "backend\\controllers\\teamController.js",
+        "loc": 110,
+        "comments": 11,
+        "mi": 86.24,
+        "complexity": 22
+      },
+      {
+        "path": "backend\\controllers\\taskController.js",
+        "loc": 78,
+        "comments": 9,
+        "mi": 91.072,
+        "complexity": 13
+      },
+      {
+        "path": "backend\\controllers\\strategicCoordinatorController.js",
+        "loc": 69,
+        "comments": 5,
+        "mi": 92.941,
+        "complexity": 10
+      },
+      {
+        "path": "backend\\controllers\\presidentController.js",
+        "loc": 70,
+        "comments": 5,
+        "mi": 93.21,
+        "complexity": 9
+      },
+      {
+        "path": "backend\\controllers\\practiceController.js",
+        "loc": 75,
+        "comments": 7,
+        "mi": 91.084,
+        "complexity": 15
+      },
+      {
+        "path": "backend\\controllers\\newsController.js",
+        "loc": 19,
+        "comments": 3,
+        "mi": 105.55,
+        "complexity": 3
+      },
+      {
+        "path": "backend\\controllers\\memberController.js",
+        "loc": 60,
+        "comments": 5,
+        "mi": 96.117,
+        "complexity": 9
+      },
+      {
+        "path": "backend\\controllers\\leaderController.js",
+        "loc": 68,
+        "comments": 5,
+        "mi": 94.436,
+        "complexity": 9
+      },
+      {
+        "path": "backend\\controllers\\contactController.js",
+        "loc": 44,
+        "comments": 4,
+        "mi": 94.891,
+        "complexity": 10
+      },
+      {
+        "path": "backend\\controllers\\authController.js",
+        "loc": 70,
+        "comments": 6,
+        "mi": 73.615,
+        "complexity": 16
+      },
+      {
+        "path": "backend\\controllers\\attendanceDocumentController.js",
+        "loc": 74,
+        "comments": 6,
+        "mi": 93.07,
+        "complexity": 13
+      },
+      {
+        "path": "backend\\controllers\\attendanceController.js",
+        "loc": 77,
+        "comments": 8,
+        "mi": 88.922,
+        "complexity": 12
+      },
+      {
+        "path": "backend\\config\\jwt.js",
+        "loc": 12,
+        "comments": 2,
+        "mi": 117.238,
+        "complexity": 3
+      },
+      {
+        "path": "backend\\config\\db.js",
+        "loc": 14,
+        "comments": 0,
+        "mi": 115.218,
+        "complexity": 2
+      },
+      {
+        "path": "backend\\config\\cloudinary.js",
+        "loc": 17,
+        "comments": 0,
+        "mi": 92.362,
+        "complexity": 1
+      },
+      {
+        "path": "frontend\\src\\setupTests.js",
+        "loc": 1,
+        "comments": 4,
+        "mi": 171,
+        "complexity": 1
+      },
+      {
+        "path": "frontend\\src\\serviceWorkerRegistration.js",
+        "loc": 98,
+        "comments": 24,
+        "mi": 119.601,
+        "complexity": 33
+      },
+      {
+        "path": "frontend\\src\\service-worker.js",
+        "loc": 38,
+        "comments": 14,
+        "mi": 113.976,
+        "complexity": 10
+      },
+      {
+        "path": "frontend\\src\\reportWebVitals.js",
+        "loc": 12,
+        "comments": 0,
+        "mi": 127.729,
+        "complexity": 5
+      },
+      {
+        "path": "frontend\\src\\index.js",
+        "loc": 24,
+        "comments": 6,
+        "mi": 116.128,
+        "complexity": 4
+      },
+      {
+        "path": "frontend\\src\\App.js",
+        "loc": 96,
+        "comments": 2,
+        "mi": 129.353,
+        "complexity": 10
+      },
+      {
+        "path": "frontend\\src\\api.js",
+        "loc": 2,
+        "comments": 2,
+        "mi": 161.738,
+        "complexity": 1
+      },
+      {
+        "path": "frontend\\src\\pages\\vicePresidentView\\VicePresidentView.js",
+        "loc": 162,
+        "comments": 4,
+        "mi": 103.654,
+        "complexity": 12
+      },
+      {
+        "path": "frontend\\src\\pages\\userManagment\\UserManagment.js",
+        "loc": 473,
+        "comments": 29,
+        "mi": 102.467,
+        "complexity": 121
+      },
+      {
+        "path": "frontend\\src\\pages\\TaskTracking\\TaskTraking.js",
+        "loc": 91,
+        "comments": 7,
+        "mi": 109.032,
+        "complexity": 12
+      },
+      {
+        "path": "frontend\\src\\pages\\TaskTracking\\TaskDetailsModal.js",
+        "loc": 30,
+        "comments": 0,
+        "mi": 134.452,
+        "complexity": 3
+      },
+      {
+        "path": "frontend\\src\\pages\\TaskTracking\\AssignTask.js",
+        "loc": 54,
+        "comments": 0,
+        "mi": 112.279,
+        "complexity": 10
+      },
+      {
+        "path": "frontend\\src\\pages\\TaskTracking\\AssignedTasks.js",
+        "loc": 58,
+        "comments": 0,
+        "mi": 114.585,
+        "complexity": 11
+      },
+      {
+        "path": "frontend\\src\\pages\\TaskTracking\\AssignedByUserTask.js",
+        "loc": 53,
+        "comments": 0,
+        "mi": 112.309,
+        "complexity": 11
+      },
+      {
+        "path": "frontend\\src\\pages\\strategicCoordinatorView\\StrategicCoordinatorView.js",
+        "loc": 170,
+        "comments": 7,
+        "mi": 105.399,
+        "complexity": 13
+      },
+      {
+        "path": "frontend\\src\\pages\\presidentView\\PresidentView.js",
+        "loc": 253,
+        "comments": 7,
+        "mi": 110.281,
+        "complexity": 21
+      },
+      {
+        "path": "frontend\\src\\pages\\pagesLeaderTH\\ToContact.js",
+        "loc": 48,
+        "comments": 0,
+        "mi": 120.44,
+        "complexity": 6
+      },
+      {
+        "path": "frontend\\src\\pages\\pagesLeaderTH\\PracticesList.js",
+        "loc": 74,
+        "comments": 3,
+        "mi": 118.776,
+        "complexity": 13
+      },
+      {
+        "path": "frontend\\src\\pages\\pagesLeaderTH\\PracticeDetails.js",
+        "loc": 179,
+        "comments": 20,
+        "mi": 104.991,
+        "complexity": 48
+      },
+      {
+        "path": "frontend\\src\\pages\\pagesLeaderTH\\CreatePractice.js",
+        "loc": 220,
+        "comments": 9,
+        "mi": 104.836,
+        "complexity": 45
+      },
+      {
+        "path": "frontend\\src\\pages\\pagesLeaderTH\\CalendarComponent.js",
+        "loc": 57,
+        "comments": 4,
+        "mi": 110.195,
+        "complexity": 7
+      },
+      {
+        "path": "frontend\\src\\pages\\pagesLeaderTH\\AttandanceChart.js",
+        "loc": 86,
+        "comments": 3,
+        "mi": 108.424,
+        "complexity": 11
+      },
+      {
+        "path": "frontend\\src\\pages\\pagesLeaderTH\\AdminDashboard.js",
+        "loc": 30,
+        "comments": 1,
+        "mi": 150.555,
+        "complexity": 2
+      },
+      {
+        "path": "frontend\\src\\pages\\memberView\\MemberView.js",
+        "loc": 58,
+        "comments": 4,
+        "mi": 117.96,
+        "complexity": 9
+      },
+      {
+        "path": "frontend\\src\\pages\\leaderView\\TeamManagement.js",
+        "loc": 296,
+        "comments": 22,
+        "mi": 108.068,
+        "complexity": 59
+      },
+      {
+        "path": "frontend\\src\\pages\\leaderView\\LeaderView.js",
+        "loc": 161,
+        "comments": 6,
+        "mi": 109.725,
+        "complexity": 16
+      },
+      {
+        "path": "frontend\\src\\pages\\LandingPage\\Navbar.js",
+        "loc": 62,
+        "comments": 3,
+        "mi": 144.911,
+        "complexity": 2
+      },
+      {
+        "path": "frontend\\src\\pages\\LandingPage\\HomePage.js",
+        "loc": 104,
+        "comments": 12,
+        "mi": 141.049,
+        "complexity": 2
+      },
+      {
+        "path": "frontend\\src\\pages\\LandingPage\\Footer.js",
+        "loc": 26,
+        "comments": 3,
+        "mi": 135.121,
+        "complexity": 2
+      },
+      {
+        "path": "frontend\\src\\pages\\LandingPage\\ButtonWhatsApp.js",
+        "loc": 14,
+        "comments": 4,
+        "mi": 150.89,
+        "complexity": 2
+      },
+      {
+        "path": "frontend\\src\\pages\\LandingPage\\pages\\ModalLogin.js",
+        "loc": 18,
+        "comments": 0,
+        "mi": 146.207,
+        "complexity": 2
+      },
+      {
+        "path": "frontend\\src\\pages\\LandingPage\\pages\\Login.js",
+        "loc": 123,
+        "comments": 2,
+        "mi": 104.684,
+        "complexity": 16
+      },
+      {
+        "path": "frontend\\src\\pages\\LandingPage\\pages\\Events.js",
+        "loc": 51,
+        "comments": 3,
+        "mi": 118.723,
+        "complexity": 3
+      },
+      {
+        "path": "frontend\\src\\pages\\LandingPage\\pages\\DebateModels.js",
+        "loc": 67,
+        "comments": 5,
+        "mi": 143.561,
+        "complexity": 2
+      },
+      {
+        "path": "frontend\\src\\pages\\LandingPage\\pages\\Contacts.js",
+        "loc": 74,
+        "comments": 0,
+        "mi": 110.31,
+        "complexity": 6
+      },
+      {
+        "path": "frontend\\src\\pages\\LandingPage\\pages\\AboutUs.js",
+        "loc": 71,
+        "comments": 7,
+        "mi": 145.955,
+        "complexity": 2
+      },
+      {
+        "path": "frontend\\src\\pages\\common\\ProfileSettings.js",
+        "loc": 82,
+        "comments": 4,
+        "mi": 99.287,
+        "complexity": 12
+      },
+      {
+        "path": "frontend\\src\\pages\\common\\ProfileDropdown.js",
+        "loc": 46,
+        "comments": 0,
+        "mi": 121.309,
+        "complexity": 6
+      },
+      {
+        "path": "frontend\\src\\pages\\common\\NabvarItems.js",
+        "loc": 131,
+        "comments": 5,
+        "mi": 124.485,
+        "complexity": 7
+      },
+      {
+        "path": "frontend\\src\\pages\\common\\MandateHistory.js",
+        "loc": 66,
+        "comments": 1,
+        "mi": 108.072,
+        "complexity": 14
+      },
+      {
+        "path": "frontend\\src\\pages\\common\\Footer.js",
+        "loc": 26,
+        "comments": 3,
+        "mi": 135.121,
+        "complexity": 2
+      },
+      {
+        "path": "frontend\\src\\pages\\common\\CurrentDirective.js",
+        "loc": 106,
+        "comments": 2,
+        "mi": 106.173,
+        "complexity": 18
+      },
+      {
+        "path": "frontend\\src\\pages\\common\\AppNavbar.js",
+        "loc": 40,
+        "comments": 0,
+        "mi": 134.174,
+        "complexity": 2
+      },
+      {
+        "path": "frontend\\src\\components\\NewsList.js",
+        "loc": 64,
+        "comments": 1,
+        "mi": 117.042,
+        "complexity": 11
+      },
+      {
+        "path": "frontend\\src\\components\\AuthContext.js",
+        "loc": 35,
+        "comments": 2,
+        "mi": 108.307,
+        "complexity": 9
+      }
+    ],
+    "totalLOC": 6695,
+    "totalComments": 500,
+    "avgMaintainability": 107.9160096153846,
+    "totalComplexity": 1188,
+    "halstead": {
+      "bugs": 0,
+      "difficulty": 0
+    }
+  },
+  "gitStats": {
+    "isRepo": true,
+    "branch": "main",
+    "commits": 13
+  },
+  "perfStats": {
+    "totalAssetSize": 85817,
+    "totalSourceSize": 346211,
+    "totalEstSize": 328164.69999999995,
+    "estLoadTime": "1.56"
+  },
+  "readmeExists": true,
+  "advanced": {
+    "hotspots": [
+      {
+        "path": "backend\\coverage\\lcov-report\\prettify.js",
+        "loc": 1,
+        "comments": 2,
+        "mi": 75.612,
+        "complexity": 208,
+        "badness": 232.388
+      },
+      {
+        "path": "frontend\\src\\pages\\userManagment\\UserManagment.js",
+        "loc": 473,
+        "comments": 29,
+        "mi": 102.467,
+        "complexity": 121,
+        "badness": 118.533
+      },
+      {
+        "path": "backend\\controllers\\userController.js",
+        "loc": 301,
+        "comments": 43,
+        "mi": 76.794,
+        "complexity": 63,
+        "badness": 86.206
+      },
+      {
+        "path": "backend\\seedData.js",
+        "loc": 270,
+        "comments": 11,
+        "mi": 45.953,
+        "complexity": 2,
+        "badness": 56.047
+      },
+      {
+        "path": "frontend\\src\\pages\\leaderView\\TeamManagement.js",
+        "loc": 296,
+        "comments": 22,
+        "mi": 108.068,
+        "complexity": 59,
+        "badness": 50.932
+      }
+    ],
+    "secretCount": 1,
+    "todoCount": 9,
+    "reliabilityDensity": "0.15",
+    "duplicationStats": {
+      "percentage": 0
+    },
+    "securityAudit": {
+      "vulnerabilities": 0,
+      "summary": "Check manual"
+    },
+    "deepAnalysis": {
+      "deadCode": [
+        "backend\\testRateLimit.js",
+        "backend\\testLogin.js",
+        "backend\\testDates2.js",
+        "backend\\testDates.js",
+        "backend\\seedUsers.js",
+        "backend\\seedDataComplete.js",
+        "backend\\seedData.js",
+        "backend\\fix_users_status.js",
+        "backend\\coverage\\lcov-report\\sorter.js",
+        "backend\\coverage\\lcov-report\\prettify.js",
+        "backend\\coverage\\lcov-report\\block-navigation.js",
+        "frontend\\src\\service-worker.js"
+      ],
+      "layeringViolations": [],
+      "dependencyCount": 196
+    }
+  }
+}

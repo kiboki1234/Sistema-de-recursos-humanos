@@ -1,0 +1,36 @@
+{
+    "projectId": "my-project",
+    "root": "..",
+    "gitRoot": "..",
+    "geminiApiKey": "AIzaSyBr1YzfKxzDNVRog9WQkPVYz9suZWj75kM",
+    "include": [
+        "backend/**/*.js",
+        "frontend/src/**/*.js"
+    ],
+    "exclude": [
+        "**/node_modules/**",
+        "**/build/**",
+        "**/dist/**",
+        "**/*.test.js",
+        "**/*.spec.js"
+    ],
+    "deepAnalysis": {
+        "entryPoints": [
+            "index.js",
+            "server.js",
+            "app.js",
+            "main.js",
+            "setupTests.js"
+        ],
+        "architecture": {
+            "frontend": [
+                "frontend/**/*",
+                "src/**/*"
+            ],
+            "backend": [
+                "backend/**/*",
+                "server/**/*"
+            ]
+        }
+    }
+}
