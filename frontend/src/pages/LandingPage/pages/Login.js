@@ -121,16 +121,10 @@ const Login = () => {
                     <button className="btn btn-primary w-100 py-2" type="submit">Iniciar Sesión</button>
                 </form>
 
-                <div className="text-center mt-4">
-                    <p>Descarga nuestra aplicación PWA para una mejor experiencia:</p>
-                    <button className="btn btn-success" onClick={downloadApp}>
-                        Descargar PWA
-                    </button>
-                </div>
-
                 {isReadyForInstall && (
-                    <div className="text-center mt-3">
-                        <button className="btn btn-warning" onClick={downloadApp}>
+                    <div className="text-center mt-4">
+                        <p>Descarga nuestra aplicación PWA para una mejor experiencia:</p>
+                        <button className="btn btn-success" onClick={downloadApp}>
                             Instalar Aplicación
                         </button>
                     </div>
