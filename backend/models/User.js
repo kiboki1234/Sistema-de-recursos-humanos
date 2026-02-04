@@ -15,7 +15,9 @@ const UserSchema = new mongoose.Schema({
   assignedLeader: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: false }, // Referencia al líder asignado
   isActive: { type: Boolean, default: true },
   period: { type: String, required: false }, // E.g., "2025-2026"
-  profilePicture: { type: String, default: "" } // URL de Cloudinary
+  profilePicture: { type: String, default: "" }, // URL de Cloudinary
+  failedLoginAttempts: { type: Number, default: 0 },
+  lockUntil: { type: Date }
 }, { timestamps: true });
 
 // Encriptar contraseña antes de guardar

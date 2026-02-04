@@ -75,7 +75,13 @@ const Login = () => {
                 login(data.token, data.user);
                 window.location.href = "/";
             } else {
-                setModalInfo({ title: "Error", text: data.message || "Algo salió mal." });
+                let title = "Error";
+                if (response.status === 403) {
+                    title = "Cuenta Bloqueada";
+                } else if (response.status === 401) {
+                    title = "Credenciales Incorrectas";
+                }
+                setModalInfo({ title: title, text: data.message || "Algo salió mal." });
             }
             handleModal();
         } catch (error) {

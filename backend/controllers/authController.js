@@ -47,11 +47,33 @@ exports.login = async (req, res) => {
       return res.status(404).json({ message: 'Usuario no encontrado' });
     }
 
+    // Verificar si la cuenta está bloqueada
+    if (user.lockUntil && user.lockUntil > Date.now()) {
+      const waitTime = Math.ceil((user.lockUntil - Date.now()) / 1000);
+      return res.status(403).json({ message: `Cuenta bloqueada. Inténtalo de nuevo en ${waitTime} segundos` });
+    }
+
     const isPasswordValid = await bcrypt.compare(password, user.password);
 
     if (!isPasswordValid) {
-      return res.status(401).json({ message: 'Contraseña incorrecta' });
+      // Incrementar intentos fallidos
+      user.failedLoginAttempts = (user.failedLoginAttempts || 0) + 1;
+
+      // Si supera los 3 intentos, bloquear por 30 segundos
+      if (user.failedLoginAttempts >= 3) {
+        user.lockUntil = Date.now() + 30 * 1000;
+        await user.save();
+        return res.status(403).json({ message: 'Has excedido el número de intentos. Cuenta bloqueada por 30 segundos' });
+      }
+
+      await user.save();
+      return res.status(401).json({ message: `Contraseña incorrecta. Intentos restantes: ${3 - user.failedLoginAttempts}` });
     }
+
+    // Si el login es exitoso, reiniciar contadores
+    user.failedLoginAttempts = 0;
+    user.lockUntil = null;
+    await user.save();
 
     const token = generateToken(user._id, user.role);
 
